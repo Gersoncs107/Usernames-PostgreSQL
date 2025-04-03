@@ -22,7 +22,10 @@ async function getNewUsernameForm(req, res){
   `);
 };
 
-exports.postNewUsername = (req, res) => {
-  console.log("username to be saved: ", req.body.username);
-  res.send("Username received. Check the terminal for details.");
+async function postNewUsername(req, res){
+  // console.log("username to be saved: ", req.body.username);
+  // res.send("Username received. Check the terminal for details.");
+  const {username} = req.body;
+  await db.insertUsername(username);
+  res.redirect("/");
 };
