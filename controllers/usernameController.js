@@ -1,3 +1,5 @@
+const db = require = ("./../db/queries");
+
 exports.getUsernames = (req, res) => {
   console.log("usernames will be logged here - wip");
   res.send("Check the terminal for logged usernames.");
