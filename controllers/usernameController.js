@@ -1,8 +1,11 @@
 const db = require = ("./../db/queries");
 
-exports.getUsernames = (req, res) => {
-  console.log("usernames will be logged here - wip");
-  res.send("Check the terminal for logged usernames.");
+async function getUsernames(req, res){
+  // console.log("usernames will be logged here - wip");
+  // res.send("Check the terminal for logged usernames.");
+  const usernames = await db.getAllUsernames();
+  console.log("usernames: ", usernames);
+  res.send("Usernames:" + usernames.map(user => user.username).join(", "));
 };
 
 exports.getNewUsernameForm = (req, res) => {
