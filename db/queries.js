@@ -1,3 +1,5 @@
+const db = require("./pool")
+
 const pool = require("./pool")
 
 async function getAllUsernames() {
