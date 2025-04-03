@@ -29,3 +29,9 @@ async function postNewUsername(req, res){
   await db.insertUsername(username);
   res.redirect("/");
 };
+
+module.exports = {
+  getUsernames,
+  getNewUsernameForm,
+  postNewUsername
+}
