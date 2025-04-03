@@ -8,7 +8,7 @@ async function getUsernames(req, res){
   res.send("Usernames:" + usernames.map(user => user.username).join(", "));
 };
 
-exports.getNewUsernameForm = (req, res) => {
+async function getNewUsernameForm(req, res){
   res.send(`
     <html>
       <body>
