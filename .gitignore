@@ -1,0 +1,3 @@
+# Ignore files with sensitive credentials
+db/pool.js
+db/populatedb.js
