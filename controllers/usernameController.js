@@ -1,4 +1,4 @@
-const db = require = ("./../db/queries");
+const db = require("../db/queries"); // Fixed import statement
 
 async function getUsernames(req, res){
   // console.log("usernames will be logged here - wip");
@@ -34,4 +34,4 @@ module.exports = {
   getUsernames,
   getNewUsernameForm,
   postNewUsername
-}
+};
