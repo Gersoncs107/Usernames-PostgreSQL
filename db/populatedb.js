@@ -24,3 +24,4 @@ async function main() {
     await client.end();
     console.log("Seeding done.")
 }
+main()
